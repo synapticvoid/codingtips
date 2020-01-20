@@ -16,6 +16,9 @@ github:
 	@make html
 	@cp -a ${BUILDDIR}/html/. ../docs
 
+livehtml:
+	sphinx-autobuild --port 9090 -b html $(ALLSPHINXOPTS) $(SOURCEDIR) $(BUILDDIR)/html
+
 .PHONY: help Makefile
 
 # Catch-all target: route all unknown targets to Sphinx using the new
