@@ -8,6 +8,8 @@ Welcome to Coding Tips's documentation!
 
 .. toctree::
    :maxdepth: 2
+
+   techtalks
    :caption: Contents:
 
 
