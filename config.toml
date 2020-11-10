@@ -1,0 +1,10 @@
+baseURL = "https://synapticvoid.github.io/codingtips/"
+languageCode = "fr-fr"
+title = "Coding Tips"
+theme = "hugo-theme-docport"
+
+pygmentsCodeFences = true
+pygmentsStyle = "monokai"
+
+[params]
+color_main = "#737373"

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Pages on Coding Tips</title>
+    <link>https://synapticvoid.github.io/codingtips/pages/</link>
+    <description>Recent content in Pages on Coding Tips</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>fr-fr</language>
+    <lastBuildDate>Tue, 10 Nov 2020 16:10:38 +0100</lastBuildDate><atom:link href="https://synapticvoid.github.io/codingtips/pages/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Javascript</title>
+      <link>https://synapticvoid.github.io/codingtips/pages/javascript/</link>
+      <pubDate>Tue, 10 Nov 2020 16:10:38 +0100</pubDate>
+      
+      <guid>https://synapticvoid.github.io/codingtips/pages/javascript/</guid>
+      <description>JavaScript intro Robin Penea | v1.1.0
+Organisation Pour faire ces exos, je vous recommande :
+ 1 repo GitHub en publique qui contient tout Dans ce repo, un dossier par exercice  Exercice #01 - Horloge Votre objectif est d&amp;rsquo;afficher une horloge qui affiche le temps courant au format suivant : HH:MM:ss. Par exemple : 23:45:12 (23h45 et 12 secondes). Cette horloge doit faire avancer les secondes de manière autonomes.</description>
+    </item>
+    
+  </channel>
+</rss>

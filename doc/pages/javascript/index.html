@@ -1,0 +1,456 @@
+
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+	Javascript :: Coding Tips
+</title>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="revised" content="2020-11-10T16:17:00 CET">
+<meta name="description" content="">
+
+
+
+<title>Javascript :: Coding Tips</title>
+
+<link rel="shortcut icon" href='/codingtips/images/favicon.png' type="image/x-icon" />
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.css">
+
+<script src='https://code.jquery.com/jquery-3.5.1.min.js'></script>
+
+<link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel="stylesheet">
+
+
+
+<link rel="stylesheet" type="text/css" href='https://synapticvoid.github.io/codingtips/sass/layout.css'>
+<link rel="stylesheet" type="text/css" href='https://synapticvoid.github.io/codingtips/css/style.main.css'>
+<link rel="stylesheet" type="text/css" href='https://synapticvoid.github.io/codingtips/css/style.menu.css'>
+<link rel="stylesheet" type="text/css" href='https://synapticvoid.github.io/codingtips/sass/shortcodes/notice.css'>
+<link rel="stylesheet" type="text/css" href='https://synapticvoid.github.io/codingtips/sass/shortcodes/tabs.css'>
+<link rel="stylesheet" type="text/css" href='https://synapticvoid.github.io/codingtips/sass/shortcodes/panel.css'>
+<link rel="stylesheet" type="text/css" href='https://synapticvoid.github.io/codingtips/sass/shortcodes/columns.css'>
+<link rel="stylesheet" type="text/css" href='https://synapticvoid.github.io/codingtips/sass/shortcodes/children.css'>
+<link rel="stylesheet" type="text/css" href='https://synapticvoid.github.io/codingtips/sass/shortcodes/attachments.css'>
+<link rel="stylesheet" type="text/css" href='https://synapticvoid.github.io/codingtips/sass/shortcodes/alert.css'>
+<link rel="stylesheet" type="text/css" href='/codingtips/css/docport.css'>
+
+<script src='/codingtips/js/docport.js'></script>
+<script type="text/javascript">
+      var baseurl = "https:\/\/synapticvoid.github.io\/codingtips\/";
+</script>
+
+
+
+
+    
+  </head>
+
+  <body data-url="/codingtips/pages/javascript/"
+
+  class="">
+
+<style type="text/css">
+  #debug{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    line-height: 3.5rem;
+    margin-bottom: .35rem;
+    padding: 0 2rem;
+    position: fixed;
+    left: 0;      right: 0;     top: 0;
+   
+    top:0px;
+    
+    min-height: 150px;
+
+    background-color: white;
+    border: 3px solid red;
+    z-index: 10000 ;
+    word-wrap: all;
+    overflow: auto;
+  }
+</style>
+ 
+
+
+    
+    
+    <header style="">
+        <div>
+    
+    <div class="burger ">
+        <a href="javascript:void(0);" style="font-size:15px;" onclick="$('article > aside').toggleClass('responsive')">&#9776;</a>
+    </div>
+    
+
+    <div>
+
+		
+	
+			
+		
+	    	<a class='baselink' href='https://synapticvoid.github.io/codingtips/'>Coding Tips</a>
+	  	
+	</div>
+
+</div>
+    </header>
+    
+
+    <article>
+      
+      <aside class="">
+        
+<div class="search">
+	<div class="searchbox">
+	  <input data-search-input id="search-by" type="text" placeholder="Type to search...">
+	</div>
+	<script type="text/javascript" src="/codingtips/vendor/lunr/lunr.min.js"></script>
+	<script type="text/javascript" src="/codingtips/vendor/auto-complete/auto-complete.js"></script>
+	<link href="/codingtips/vendor/auto-complete/auto-complete.css" rel="stylesheet">
+	<script type="text/javascript">
+	  
+	      var baseurl = "https:\/\/synapticvoid.github.io\/codingtips\/";
+	  
+	</script>
+	<script type="text/javascript" src="/codingtips/js/search.js"></script>
+</div>
+
+		
+	
+			
+		
+	    	
+	  	
+	<div id="close_menu">
+  <a href="javascript:void(0);" style="font-size:15px;" onclick="$('article > aside').toggleClass('responsive')">
+      <i class="fa fa-lg fa-times"></i>
+  </a>
+</div>
+
+<ul class="menu">
+
+    <li data-nav-id="https://synapticvoid.github.io/codingtips/pages/" class="dd-item parent active
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+        
+      
+          <a href="/codingtips/pages/">Pages</a>
+      
+    </li>
+    
+
+
+
+</ul>
+
+		
+	
+			
+		
+	    	
+	  	
+	
+      </aside>
+      
+
+      <section class="page ">
+      
+	
+    
+    
+    <nav id="ariane" aria-label="breadcrumb">
+      <ol class="ariane">
+        
+  
+  	
+		
+  
+  	
+	<li >
+      <a class="text-link" href="https://synapticvoid.github.io/codingtips/">
+        Home
+      </a>
+    </li>
+	
+  
+    <li class="">
+      <a class="text-link" href="/codingtips/pages/">
+        Pages
+      </a>
+    </li>
+	
+  	
+  
+    <li class="active">
+      
+        Javascript
+      
+    </li>
+
+      </ol>
+    </nav>
+    
+    
+
+    
+		
+        
+		
+		
+		
+		
+		
+		
+		
+
+		
+			<h1>Pages<span>Javascript</span></h1>
+        
+
+			
+			
+		
+
+		
+				<nav class="subpages">
+	            		
+	        			
+	            	<li class="active">
+	            		<a title="$pagetitle" href="/codingtips/pages/javascript/">Javascript</a>
+	            	</li>
+	        	</nav> 
+		
+	
+
+	
+	
+	<div class="jump-to-section">
+		<span onclick="$h = $(this);$h.next('nav').slideToggle(100,function () {$h.children('i').attr('class',function () {return $h.next('nav').is(':visible') ? 'fas fa-chevron-down' : 'fas fa-chevron-right';});});">
+  			<span class="fas fa-align-right"></span>
+  			Jump to Section
+  			<i style=";" class="fas fa-chevron-right"></i>
+		</span>
+		<nav id="TableOfContents">
+  <ul>
+    <li><a href="#organisation">Organisation</a></li>
+    <li><a href="#exercice-01---horloge">Exercice #01 - Horloge</a></li>
+    <li><a href="#exercice-02---chronomètre">Exercice #02 - Chronomètre</a></li>
+    <li><a href="#exercice-03---calculateur-de-dépense">Exercice #03 - Calculateur de dépense</a></li>
+    <li><a href="#exercice-04a---todo-list">Exercice #04A - TODO List</a></li>
+    <li><a href="#exercice-04b---todo-list">Exercice #04B - TODO List++</a></li>
+    <li><a href="#exercice-04c---todo-list-crazy-wow-omg">Exercice #04C - TODO List+++ CRAZY WOW OMG</a></li>
+    <li><a href="#exercice-05---calculatrice">Exercice #05 - Calculatrice</a></li>
+  </ul>
+</nav>
+	</div>
+	
+	
+
+
+
+
+
+
+	<div class="content">
+	    <h1 ref="javascript-intro" >JavaScript intro</h1><a class="anchor" id="javascript-intro"></a>
+<p>Robin Penea | v1.1.0</p>
+<h2 ref="organisation" >Organisation</h2><a class="anchor" id="organisation"></a>
+<p>Pour faire ces exos, je vous recommande :</p>
+<ul>
+<li>1 repo GitHub en publique qui contient tout</li>
+<li>Dans ce repo, un dossier par exercice</li>
+</ul>
+<h2 ref="exercice-01---horloge" >Exercice #01 - Horloge</h2><a class="anchor" id="exercice-01---horloge"></a>
+<p>Votre objectif est d&rsquo;afficher une horloge qui affiche le temps courant au format suivant : HH:MM:ss. Par exemple : 23:45:12 (23h45 et 12 secondes). Cette horloge doit faire avancer les secondes de manière autonomes.</p>
+<p>Pour réaliser cet exercice, vous aurez besoin des fonctions suivantes :</p>
+<ul>
+<li><a href="https://www.w3schools.com/jsref/met_win_settimeout.asp">setTimeout()</a> : exécuter une fonction périodiquement. Par exemple pour mettre à jour votre affichage toutes les secondes</li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date">Date()</a> : formatter la date en récupérant les différents composants (heure, minute, seconde) et produire une String avec le résultat</li>
+</ul>
+<h2 ref="exercice-02---chronomètre" >Exercice #02 - Chronomètre</h2><a class="anchor" id="exercice-02---chronomètre"></a>
+<p>Créer un chronomètre avec 3 boutons permettant de :</p>
+<ul>
+<li>Démarrer un chronomètre</li>
+<li>Arrêter un chronomètre</li>
+<li>Remettre le chronomètre à 0</li>
+</ul>
+<p>Le chronomètre affiche le temps écoulé depuis le démarrage avec le format suivant MM:ss:mm (minutes, secondes, centièmes de secondes.</p>
+<p>Pour réaliser cet exercices, vous aurez besoin :</p>
+<ul>
+<li><a href="https://www.w3schools.com/jsref/met_win_cleartimeout.asp">clearTimeout()</a> : arrêter une fonction appelée périodiquement (pour un stop / reset)</li>
+</ul>
+<h2 ref="exercice-03---calculateur-de-dépense" >Exercice #03 - Calculateur de dépense</h2><a class="anchor" id="exercice-03---calculateur-de-dépense"></a>
+<p>Faire une page permettant de calculer ce que doit payer chaque personne d&rsquo;un groupe pour une dépense commune. Vous aurez :</p>
+<ul>
+<li>Un champ pour indiquer le nombre de personnes</li>
+<li>Un champ pour indiquer le montant de la dépense</li>
+<li>Un bouton permettant de lancer le calcul</li>
+<li>Un résultat affichant le montant a payer par personne</li>
+</ul>
+<h2 ref="exercice-04a---todo-list" >Exercice #04A - TODO List</h2><a class="anchor" id="exercice-04a---todo-list"></a>
+<p>Faire une page permettant de créer une TODO list :</p>
+<ul>
+<li>Un champ texte pour saisir une tâche à faire</li>
+<li>Un bouton pour créer la tâche</li>
+<li>Une liste de tâches enregistrées</li>
+</ul>
+<p>Chaque fois que l&rsquo;utilisateur clique sur le bouton de création, le texte du champ de saisie est récupéré, une tâche est créé et elle est affichée dans la liste de tâche.</p>
+<p>A côté de chaque tâche de la liste, une croix permet de supprimer la tâche de la liste (avec une fenêtre demandant confirmation à l&rsquo;utilisateur). Quand la tâche est supprimée, une fenêtre de confirmation est affichée</p>
+<p>Pour réaliser cet exercices, vous aurez besoin :</p>
+<ul>
+<li><a href="https://www.w3schools.com/jsref/met_win_confirm.asp">confirm()</a> : pour demander une confirmation à l&rsquo;utilisateur</li>
+<li><a href="https://www.w3schools.com/jsref/met_win_alert.asp">alert()</a> : pour afficher un message à l&rsquo;utilisateur</li>
+</ul>
+<h2 ref="exercice-04b---todo-list" >Exercice #04B - TODO List++</h2><a class="anchor" id="exercice-04b---todo-list"></a>
+<p>Reprendre le projet de la TODO list et apporter les améliorations suivants :</p>
+<ul>
+<li>Une tâche comporte un titre + une description qu&rsquo;il faut saisir</li>
+<li>Une tâche ne peut être ajoutée que si qqch est écrit dans le titre et dans la description (il faut filtrer les espaces)</li>
+<li>La liste des tâches au centre affiche le titre + description</li>
+<li>Une liste sur le côté affiche la liste des tâches avec uniquement le titre de chacune</li>
+</ul>
+<p>L&rsquo;objectif ici est de séparer les données (les tâches) de l&rsquo;UI (le HTML). Vous aurez donc votre liste de tâches et elle alimentera la liste centrale et la liste sur le côté.</p>
+<p>Autre point d&rsquo;amélioration : utiliser la bibliothèque <a href="https://jquery.com/">JQuery</a>. Voici un <a href="https://www.tutorialrepublic.com/jquery-tutorial/jquery-get-started.php">tuto relativement complet</a>.</p>
+<p>Vous devrez ici remplacer pratiquement toutes vos interactions avec le DOM (<code>getElementById</code>, etc) avec une fonction JQuery. Une fois que c&rsquo;est fait, proposer les fonctionnalités suivantes :</p>
+<ul>
+<li>Un bouton sur chaque tâche (dans la liste centrale) permettant d&rsquo;agrandir la note ou de la réduire (pour voir le titre ou le titre + description)</li>
+<li>Lorsqu&rsquo;une tâche est supprimée, faire une animation de fade out (disparition progressive)</li>
+<li>Lorsqu&rsquo;une tâche est ajoutée, faire une animation de fade in (apparition progressive)</li>
+<li>Ajouter une icône dans une tâche permettant de changer l&rsquo;ordre (par un glissé / déposé)</li>
+</ul>
+<h2 ref="exercice-04c---todo-list-crazy-wow-omg" >Exercice #04C - TODO List+++ CRAZY WOW OMG</h2><a class="anchor" id="exercice-04c---todo-list-crazy-wow-omg"></a>
+<p>Reprendre le projet de la TODO list précédemment développé et enregistrer les tâches de manière persistent. L&rsquo;objectif est de pouvoir revenir sur la page et retrouver ses anciennes notes.</p>
+<p>Pour cela, vous aurez besoin de :</p>
+<ul>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage">localStorage</a> pour enregistrer vos données. Voici <a href="https://www.w3schools.com/html/html5_webstorage.asp">quelques examples</a> d&rsquo;utilisation</li>
+<li>Formatter vos données en JSON pour les enregistrer / charger avec les fonctions <a href="https://www.w3schools.com/js/js_json_stringify.asp">stringify()</a> et <a href="https://www.w3schools.com/js/js_json_parse.asp">parse()</a></li>
+</ul>
+<h2 ref="exercice-05---calculatrice" >Exercice #05 - Calculatrice</h2><a class="anchor" id="exercice-05---calculatrice"></a>
+<p>Programmer une calculatrice permettant à l&rsquo;utilisateur de :</p>
+<ul>
+<li>Cliquer sur les chiffres et mettre à jour un afficheur</li>
+<li>Cliquer sur des opérations (addition / soustraction / multiplication / division)</li>
+<li>Cliquer sur un bouton = pour calculer et afficher le résultat</li>
+<li>Cliquer sur une bouton CE pour remettre à 0 la calculatrice</li>
+</ul>
+<p>Allez-y par étape et faites d&rsquo;abord les opérations simples : une opération c&rsquo;est :</p>
+<ol>
+<li>Un chiffre</li>
+<li>Un opérateur</li>
+<li>Un chiffre</li>
+<li>égal</li>
+</ol>
+<p>A partir de là, vous pourrez complexifier et supporter des opérations plus complexes.</p>
+<p>En bonus :</p>
+<ul>
+<li>Supporter la saisie clavier : plutot que de cliquer, l&rsquo;utilisateur tape sur son clavier les opérations. Pour cela, vous devez les évenements clavier avec <a href="https://o7planning.org/fr/12319/tutoriel-javascript-keyboardevent">un keyevent.</a></li>
+<li>Précédence des opérateurs : dans le calcul <code>1 + 2 * 4</code>, la multiplication doit s&rsquo;appliquer avant l&rsquo;addition. L&rsquo;algorithme pour gérer cela est la <a href="https://dev.to/subinedge/evaluate-reverse-polish-notation-expressions-using-javascript-algorithms-jmb">notation polonaise inversée</a>.</li>
+</ul>
+
+		</div>
+
+
+
+
+
+
+	 
+	<div class="chevrons">
+		
+	</div>
+	
+
+      </section>
+
+      
+      
+      <section class="right-menu ">
+      
+	
+
+		
+	
+			
+		
+	    	
+	  	
+	<div class="TableOfContents">
+    <label><i class="fas fa-align-right"></i>&nbsp;&nbsp;What&#39;s on this page</label>
+    <nav>
+        <ul >
+            <li><a href="/codingtips/pages/javascript/">Javascript</a></li>
+        </ul>
+    </nav>
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#organisation">Organisation</a></li>
+    <li><a href="#exercice-01---horloge">Exercice #01 - Horloge</a></li>
+    <li><a href="#exercice-02---chronomètre">Exercice #02 - Chronomètre</a></li>
+    <li><a href="#exercice-03---calculateur-de-dépense">Exercice #03 - Calculateur de dépense</a></li>
+    <li><a href="#exercice-04a---todo-list">Exercice #04A - TODO List</a></li>
+    <li><a href="#exercice-04b---todo-list">Exercice #04B - TODO List++</a></li>
+    <li><a href="#exercice-04c---todo-list-crazy-wow-omg">Exercice #04C - TODO List+++ CRAZY WOW OMG</a></li>
+    <li><a href="#exercice-05---calculatrice">Exercice #05 - Calculatrice</a></li>
+  </ul>
+</nav>
+</div>
+
+		
+	
+			
+		
+	    	
+	  	
+	<div class="Actions">
+	<nav>
+		<ul>
+				
+		    
+		    
+			
+		      <li>
+		          <i class='fas fa-calendar'></i>
+		          Last update on 10 November 2020
+		      </li>
+		    
+		    
+
+    	</ul>
+	</nav>
+    
+</div>
+
+      </section>
+      
+    </article>
+    
+    
+    <footer>
+      
+
+		
+	
+			
+		
+	    	Create a content/_layout/footer/_index.md file to customize the footer content !
+	  	
+	
+    </footer>
+    
+
+
+
+  </body>
+</html>
