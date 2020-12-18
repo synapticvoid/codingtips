@@ -6,7 +6,17 @@
     <description>Recent content on Coding Tips</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>fr-fr</language>
-    <lastBuildDate>Tue, 10 Nov 2020 16:10:38 +0100</lastBuildDate><atom:link href="https://synapticvoid.github.io/codingtips/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 18 Dec 2020 19:33:41 +0100</lastBuildDate><atom:link href="https://synapticvoid.github.io/codingtips/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Python Opencv Object Tracker</title>
+      <link>https://synapticvoid.github.io/codingtips/pages/python-opencv-object-tracker/</link>
+      <pubDate>Fri, 18 Dec 2020 19:33:41 +0100</pubDate>
+      
+      <guid>https://synapticvoid.github.io/codingtips/pages/python-opencv-object-tracker/</guid>
+      <description>TMIYC (Track Me If You Can) Objectif Être capable de suivre un objet dans une vidéo. L&amp;rsquo;objet doit être identifié (par un rectangle) et un rectangle doit être affiché pendant la lecture de la vidéo pour indiqué que la vidéo est suivi.
+Stack technique  Imagerie avec OpenCV Interface graphique avec Kivy. :warning:Kivy est compatible avec Python 3.7 maximum (ils n&amp;rsquo;ont pas encore migré) ​  Kivy peut être mis de côté dans un 1er temps, il est utile qu&amp;rsquo;après avoir implémenté et fiabilisé l&amp;rsquo;algorithme de recherche.</description>
+    </item>
+    
     <item>
       <title>Javascript</title>
       <link>https://synapticvoid.github.io/codingtips/pages/javascript/</link>
@@ -16,6 +26,18 @@
       <description>JavaScript intro Robin Penea | v1.1.0
 Organisation Pour faire ces exos, je vous recommande :
  1 repo GitHub en publique qui contient tout Dans ce repo, un dossier par exercice  Exercice #01 - Horloge Votre objectif est d&amp;rsquo;afficher une horloge qui affiche le temps courant au format suivant : HH:MM:ss. Par exemple : 23:45:12 (23h45 et 12 secondes). Cette horloge doit faire avancer les secondes de manière autonomes.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://synapticvoid.github.io/codingtips/pages/python-morpion/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://synapticvoid.github.io/codingtips/pages/python-morpion/</guid>
+      <description>Morpion Description L&amp;rsquo;objectif est de développer un morpion en Python où 2 joueurs vont jouer au tour par tour.
+Le programme doit :
+ Afficher une grille de jeu Demander au joueur 1 de choisir une case pour jouer Le jeu affiche la grille de jeu avec la case remplie Demander au joueur 2 de choisir une case pour jouer  Cette boucle se répète jusqu&amp;rsquo;a ce que :
+ Un des joueurs réussi un alignement de 3 La grille est remplie sans que personne gagne  En fin de partie, le résultat du jeu est affiché.</description>
     </item>
     
   </channel>
