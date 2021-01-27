@@ -3,13 +3,12 @@
 <!DOCTYPE html>
 <html>
   <head>
-	<meta name="generator" content="Hugo 0.80.0" />
     <title>
 	 :: Coding Tips
 </title>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<meta name="revised" content="2021-01-27T19:43:00 CET">
+<meta name="revised" content="2021-01-27T19:26:53 CET">
 <meta name="description" content="">
 
 
@@ -51,7 +50,7 @@
     
   </head>
 
-  <body data-url="/codingtips/"
+  <body data-url="/codingtips/pages/python-morpion/"
 
   class="">
 
@@ -137,7 +136,7 @@
 
 <ul class="menu">
 
-    <li data-nav-id="https://synapticvoid.github.io/codingtips/pages/" class="dd-item
+    <li data-nav-id="https://synapticvoid.github.io/codingtips/pages/" class="dd-item parent active
         item_level_$level
         ">
 
@@ -168,13 +167,31 @@
 
       <section class="page ">
       
-	 
-		
+	
     
     
     <nav id="ariane" aria-label="breadcrumb">
       <ol class="ariane">
         
+  
+  	
+		
+  
+  	
+	<li >
+      <a class="text-link" href="https://synapticvoid.github.io/codingtips/">
+        Home
+      </a>
+    </li>
+	
+  
+    <li class="">
+      <a class="text-link" href="/codingtips/pages/">
+        Pages
+      </a>
+    </li>
+	
+  	
   
     <li class="active">
       
@@ -201,13 +218,31 @@
 		
 
 		
-			<h1></h1>
+			<h1>Pages<span>python-morpion</span></h1>
         
 
-		
-										
+			
+			
 		
 
+		
+				<nav class="subpages">
+	            		
+	        			
+	            	<li >
+	            		<a title="$pagetitle" href="/codingtips/pages/python-opencv-object-tracker/">Python Opencv Object Tracker</a>
+	            	</li>
+	            		
+	        			
+	            	<li >
+	            		<a title="$pagetitle" href="/codingtips/pages/javascript/">Javascript</a>
+	            	</li>
+	            		
+	        			
+	            	<li class="active">
+	            		<a title="$pagetitle" href="/codingtips/pages/python-morpion/">python-morpion</a>
+	            	</li>
+	        	</nav> 
 		
 	
 
@@ -219,7 +254,12 @@
   			Jump to Section
   			<i style=";" class="fas fa-chevron-right"></i>
 		</span>
-		<nav id="TableOfContents"></nav>
+		<nav id="TableOfContents">
+  <ul>
+    <li><a href="#description">Description</a></li>
+    <li><a href="#rendu">Rendu</a></li>
+  </ul>
+</nav>
 	</div>
 	
 	
@@ -230,7 +270,59 @@
 
 
 	<div class="content">
-	    <h1 ref="bienvenue-sur-coding-tips" >Bienvenue sur Coding Tips</h1><a class="anchor" id="bienvenue-sur-coding-tips"></a>
+	    <h1 ref="morpion" >Morpion</h1><a class="anchor" id="morpion"></a>
+<h2 ref="description" >Description</h2><a class="anchor" id="description"></a>
+<p>L&rsquo;objectif est de développer un <a href="https://fr.wikipedia.org/wiki/Tic-tac-toe">morpion</a> en Python où 2 joueurs vont jouer au tour par tour.</p>
+<p>Le programme doit :</p>
+<ol>
+<li>Afficher une grille de jeu</li>
+<li>Demander au joueur 1 de choisir une case pour jouer</li>
+<li>Le jeu affiche la grille de jeu avec la case remplie</li>
+<li>Demander au joueur 2 de choisir une case pour jouer</li>
+</ol>
+<p>Cette boucle se répète jusqu&rsquo;a ce que :</p>
+<ul>
+<li>Un des joueurs réussi un alignement de 3</li>
+<li>La grille est remplie sans que personne gagne</li>
+</ul>
+<p>En fin de partie, le résultat du jeu est affiché. Pour simplifié la saisie, un utilisateur saisie la case par son numéro. Les cases sont numérotées comme ceci :</p>
+<table>
+<thead>
+<tr>
+<th>1</th>
+<th>2</th>
+<th>3</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>4</td>
+<td>5</td>
+<td>6</td>
+</tr>
+<tr>
+<td>7</td>
+<td>8</td>
+<td>9</td>
+</tr>
+</tbody>
+</table>
+<p>Le programme doit supporter les fonctionnalités additionnelles suivantes :</p>
+<ul>
+<li>
+<p>Si on lance le programme avec l&rsquo;argument -<code>-parties 3</code>, le programme va enchainer 3 parties. Le nombre de partie est change en fonction du nombre saisie en argument</p>
+</li>
+<li>
+<p>Le programme doit écrire chaque action dans un fichier de log. Exemple :</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json"><span style="color:#960050;background-color:#1e0010">Joueur</span> <span style="color:#ae81ff">1</span> <span style="color:#960050;background-color:#1e0010">joue</span> <span style="color:#960050;background-color:#1e0010">O</span> <span style="color:#960050;background-color:#1e0010">dans</span> <span style="color:#960050;background-color:#1e0010">la</span> <span style="color:#960050;background-color:#1e0010">case</span> [<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">1</span>]
+  
+<span style="color:#960050;background-color:#1e0010">Joueur</span> <span style="color:#ae81ff">2</span> <span style="color:#960050;background-color:#1e0010">joue</span> <span style="color:#960050;background-color:#1e0010">X</span> <span style="color:#960050;background-color:#1e0010">dans</span> <span style="color:#960050;background-color:#1e0010">la</span> <span style="color:#960050;background-color:#1e0010">case</span> [<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>]
+  
+<span style="color:#960050;background-color:#1e0010">Le</span> <span style="color:#960050;background-color:#1e0010">joueur</span> <span style="color:#ae81ff">2</span> <span style="color:#960050;background-color:#1e0010">a</span> <span style="color:#960050;background-color:#1e0010">gagné</span>
+</code></pre></div></li>
+</ul>
+<h2 ref="rendu" >Rendu</h2><a class="anchor" id="rendu"></a>
+<p><strong>Le rendu doit être fait le dimanche 06/12/2020à  23h59</strong>. Il faudra m&rsquo;envoyer le lien vers le repo GitHub (mon adresse mail : <a href="mailto:robin.penea@gmail.com">robin.penea@gmail.com</a>). C&rsquo;est la date du dernier qui commit qui compte.</p>
 
 		</div>
 
@@ -241,14 +333,8 @@
 
 	 
 	<div class="chevrons">
-		<a class="next" href="/codingtips/pages/" title="Pages" style="margin-right: 0px;">
-            <div>
-                <p>Next page</p>
-                <label>Pages</label>
-            </div>
-            <i class="fas fa-arrow-right" style="font-size: 1.7em"></i></a>
+		
 	</div>
-	
 	
 
       </section>
@@ -257,8 +343,7 @@
       
       <section class="right-menu ">
       
-	 
-		
+	
 
 		
 	
@@ -270,10 +355,15 @@
     <label><i class="fas fa-align-right"></i>&nbsp;&nbsp;What&#39;s on this page</label>
     <nav>
         <ul >
-            <li><a href="/codingtips/"></a></li>
+            <li><a href="/codingtips/pages/python-morpion/"></a></li>
         </ul>
     </nav>
-    <nav id="TableOfContents"></nav>
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#description">Description</a></li>
+    <li><a href="#rendu">Rendu</a></li>
+  </ul>
+</nav>
 </div>
 
 		
@@ -289,18 +379,12 @@
 		    
 		    
 			
-		      <li>
-		          <i class='fas fa-calendar'></i>
-		          Last update on 27 January 2021
-		      </li>
-		    
 		    
 
     	</ul>
 	</nav>
     
 </div>
-	
 
       </section>
       

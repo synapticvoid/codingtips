@@ -2,6 +2,7 @@ baseURL = "https://synapticvoid.github.io/codingtips/"
 languageCode = "fr-fr"
 title = "Coding Tips"
 theme = "hugo-theme-docport"
+enableEmoji=true
 
 pygmentsCodeFences = true
 pygmentsStyle = "monokai"

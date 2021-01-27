@@ -8,7 +8,7 @@
 </title>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<meta name="revised" content="2020-12-18T19:35:38 CET">
+<meta name="revised" content="2021-01-27T19:43:00 CET">
 <meta name="description" content="">
 
 
@@ -191,7 +191,7 @@
   
     <li class="active">
       
-        Python Opencv Object Tracker
+        Python Js Blockchain Kraken
       
     </li>
 
@@ -212,7 +212,7 @@
 		
 
 		
-			<h1>Pages<span>Python Opencv Object Tracker</span></h1>
+			<h1>Pages<span>Python Js Blockchain Kraken</span></h1>
         
 
 			
@@ -224,6 +224,11 @@
 	            		
 	        			
 	            	<li class="active">
+	            		<a title="$pagetitle" href="/codingtips/pages/python-js-blockchain-kraken/">Python Js Blockchain Kraken</a>
+	            	</li>
+	            		
+	        			
+	            	<li >
 	            		<a title="$pagetitle" href="/codingtips/pages/python-opencv-object-tracker/">Python Opencv Object Tracker</a>
 	            	</li>
 	            		
@@ -248,23 +253,7 @@
   			Jump to Section
   			<i style=";" class="fas fa-chevron-right"></i>
 		</span>
-		<nav id="TableOfContents">
-  <ul>
-    <li><a href="#objectif">Objectif</a></li>
-    <li><a href="#stack-technique">Stack technique</a></li>
-    <li><a href="#progression">Progression</a>
-      <ul>
-        <li><a href="#1-retrouver-un-objet-dans-une-image">1. Retrouver un objet dans une image</a></li>
-        <li><a href="#2-pourcentage-de-confiance">2. Pourcentage de confiance</a></li>
-        <li><a href="#3-recherche-dans-une-vidéo">3. Recherche dans une vidéo</a></li>
-        <li><a href="#4-zone-de-recherche">4. Zone de recherche</a></li>
-        <li><a href="#5-webcam">5. Webcam</a></li>
-        <li><a href="#6-intégration-dans-une-ui">6. Intégration dans une UI</a></li>
-        <li><a href="#7-choix-de-lobjet-suivi">7. Choix de l&rsquo;objet suivi</a></li>
-      </ul>
-    </li>
-  </ul>
-</nav>
+		<nav id="TableOfContents"></nav>
 	</div>
 	
 	
@@ -274,55 +263,7 @@
 
 
 
-	<div class="content">
-	    <h1 ref="tmiyc-track-me-if-you-can" >TMIYC (Track Me If You Can)</h1><a class="anchor" id="tmiyc-track-me-if-you-can"></a>
-<h2 ref="objectif" >Objectif</h2><a class="anchor" id="objectif"></a>
-<p>Être capable de suivre un objet dans une vidéo. L&rsquo;objet doit être identifié (par un rectangle) et un rectangle doit être affiché pendant la lecture de la vidéo pour indiqué que la vidéo est suivi.</p>
-<h2 ref="stack-technique" >Stack technique</h2><a class="anchor" id="stack-technique"></a>
-<ul>
-<li>Imagerie avec <a href="https://pypi.org/project/opencv-python/">OpenCV</a></li>
-<li>Interface graphique avec <a href="https://kivy.org/#home">Kivy</a>. :warning:Kivy est compatible avec Python 3.7 maximum (ils n&rsquo;ont pas encore migré) ​</li>
-</ul>
-<p>Kivy peut être mis de côté dans un 1er temps, il est utile qu&rsquo;après avoir implémenté et fiabilisé l&rsquo;algorithme de recherche.</p>
-<h2 ref="progression" >Progression</h2><a class="anchor" id="progression"></a>
-<h3 ref="1-retrouver-un-objet-dans-une-image" >1. Retrouver un objet dans une image</h3><a class="anchor" id="1-retrouver-un-objet-dans-une-image"></a>
-<p>A partir d&rsquo;une image de référence (rond rouge sur fond transparent), le programme doit être capable de retrouver le rond rouge dans une 2ème image avec un fond blanc.</p>
-<p>Ici on simplifie le problème :</p>
-<ul>
-<li>Fond uni</li>
-<li>Objet suivi strictement pareil (pas de variation d&rsquo;angle / couleur / luminosité)</li>
-<li>Pas de vidéo</li>
-</ul>
-<p>:hatching_chick: ​DoD : Un rectangle dessiné sur la 2ème image indique la position du rond.</p>
-<h3 ref="2-pourcentage-de-confiance" >2. Pourcentage de confiance</h3><a class="anchor" id="2-pourcentage-de-confiance"></a>
-<p>Le rond rouge de l&rsquo;image de référence doit être retrouver dans la 2ème image avec un pourcentage de confiance (100% l&rsquo;objet est strictement le même, 0% l&rsquo;objet n&rsquo;a pas du tout pareil). L&rsquo;objectif est de supporter des déformations de l&rsquo;objet (langle / luminosité / taille).</p>
-<p>Le pourcentage de confiance doit être paramétrable. Si on détermine un pourcentage de confiance a 0.75, l&rsquo;objet sera retrouvé si il correspond a 75% ou plus à l&rsquo;image original.</p>
-<p>:hatching_chick: ​DoD : Le rond rouge est retrouvé alors qu&rsquo;il est légèrement différent dans l&rsquo;image (taille / quelques pixels qui changent). Le pourcentage de confiance est affiché</p>
-<h3 ref="3-recherche-dans-une-vidéo" >3. Recherche dans une vidéo</h3><a class="anchor" id="3-recherche-dans-une-vidéo"></a>
-<p>L&rsquo;objet recherché doit maintenant être dans une vidéo. OpenCV permet d&rsquo;extraire les images d&rsquo;une vidéo. et la recherche doit être faite dans toutes les images de la vidéo.</p>
-<p>:warning: Attention, le codec de la vidéo doit être supporté par OpenCV. Il est possible qu&rsquo;il faille OpenCV avec ffmpeg pour décoder la vidéo.</p>
-<p>:hatching_chick: ​DoD : chaque images de la vidéo analysée est extraite et enregistrer dans un dossier de sortie (par simplicité, les images sont nommées image_001.jpg, image_002.jpg). Chaque image contient un rectangle indiquant la position de l&rsquo;objet suivi ainsi que le pourcentage de confiance associé.</p>
-<h3 ref="4-zone-de-recherche" >4. Zone de recherche</h3><a class="anchor" id="4-zone-de-recherche"></a>
-<p>Afin d&rsquo;accélerer la recherche de l&rsquo;objet, des zones de recherche sont définies. Une fois que l&rsquo;objet a été trouvé dans une frame N, l&rsquo;objet est cherché dans une zone de proximité dans la frame N + 1. Il s&rsquo;agit donc d&rsquo;enregistrer la position de l&rsquo;objet trouvé pour se baser dessus lors de la recherche dans la frame suivante. Si l&rsquo;objet n&rsquo;est pas trouvé, la zone est étendu jusqu&rsquo;à inclure l&rsquo;intégralité de l&rsquo;image.</p>
-<p>:hatching_chick: ​DoD : 2 zones de recherche de taille croissante puis une recherche dans toute l&rsquo;image. Le temps moyen de recherche est affiché en console pour chaque frame ainsi que le temps de recherche sur toute la vidéo. A comparer avec le temps de traitement avant l&rsquo;implémentation de la zone de recherche pour comparaison.</p>
-<h3 ref="5-webcam" >5. Webcam</h3><a class="anchor" id="5-webcam"></a>
-<p>Au lieu d&rsquo;une source de vidéo prédéfinie, la recherche de l&rsquo;objet est faite dans le flux de la webcam. On considère que l&rsquo;objet a recherché a été au préalable sélectionné dans une image séparé (rond rouge sur fond transparent).</p>
-<p>Pour tester, on peut imprimer le rond rouge et le passer devant la caméra.</p>
-<p>:hatching_chick: ​DoD : le flux vidéo de la webcam est affiché avec le l&rsquo;objet suivi encadré par un rectangle + pourcentage de confiance</p>
-<h3 ref="6-intégration-dans-une-ui" >6. Intégration dans une UI</h3><a class="anchor" id="6-intégration-dans-une-ui"></a>
-<p>Intégrer le flux de la webcam dans une fenêtre Kivy. Le fonctionnement reste le même que précédemment. Cette étape permet de valider l&rsquo;interaction entre OpenCV et Kivy.</p>
-<p>DoD : Une fenêtre Kivy avec 3 boutons :</p>
-<ul>
-<li>Démarrer Webcam</li>
-<li>Arrêter Webcam</li>
-<li>Démarrer suivi d&rsquo;objet</li>
-</ul>
-<p>:hatching_chick: ​DoD : Les boutons s&rsquo;activent / désactivent en fonction de l&rsquo;état courant (Bouton arrêter webcam n&rsquo;est activé que si la webcam a été démarré, etc)</p>
-<h3 ref="7-choix-de-lobjet-suivi" >7. Choix de l&rsquo;objet suivi</h3><a class="anchor" id="7-choix-de-lobjet-suivi"></a>
-<p>Proposer une UI permettant de choisir dans le flux webcam l&rsquo;objet qui sera suivi. Un clic aux coordonnées haut-gauche + clic bas droit définisse le rectangle contenant l&rsquo;objet à suivre</p>
-<p>:hatching_chick: ​DoD : Un bouton &ldquo;Définir objet&rdquo; qui active la possibilité de cliquer dans l&rsquo;image pour définir les coordonnées de l&rsquo;objet suivi. On peut à tout moment changer l&rsquo;objet suivi</p>
-
-		</div>
+	<div class="content">No content</div>
 
 
 
@@ -372,7 +313,7 @@
 			
 		      <li>
 		          <i class='fas fa-calendar'></i>
-		          Last update on 18 December 2020
+		          Last update on 27 January 2021
 		      </li>
 		    
 		    

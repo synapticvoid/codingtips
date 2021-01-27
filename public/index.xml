@@ -1,21 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Pages on Coding Tips</title>
-    <link>https://synapticvoid.github.io/codingtips/pages/</link>
-    <description>Recent content in Pages on Coding Tips</description>
+    <title>Coding Tips</title>
+    <link>https://synapticvoid.github.io/codingtips/</link>
+    <description>Recent content on Coding Tips</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>fr-fr</language>
-    <lastBuildDate>Wed, 27 Jan 2021 19:26:48 +0100</lastBuildDate><atom:link href="https://synapticvoid.github.io/codingtips/pages/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Python Js Blockchain Kraken</title>
-      <link>https://synapticvoid.github.io/codingtips/pages/python-js-blockchain-kraken/</link>
-      <pubDate>Wed, 27 Jan 2021 19:26:48 +0100</pubDate>
-      
-      <guid>https://synapticvoid.github.io/codingtips/pages/python-js-blockchain-kraken/</guid>
-      <description></description>
-    </item>
-    
+    <lastBuildDate>Fri, 18 Dec 2020 19:33:41 +0100</lastBuildDate><atom:link href="https://synapticvoid.github.io/codingtips/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Python Opencv Object Tracker</title>
       <link>https://synapticvoid.github.io/codingtips/pages/python-opencv-object-tracker/</link>
@@ -23,7 +14,7 @@
       
       <guid>https://synapticvoid.github.io/codingtips/pages/python-opencv-object-tracker/</guid>
       <description>TMIYC (Track Me If You Can) Objectif Être capable de suivre un objet dans une vidéo. L&amp;rsquo;objet doit être identifié (par un rectangle) et un rectangle doit être affiché pendant la lecture de la vidéo pour indiqué que la vidéo est suivi.
-Stack technique  Imagerie avec OpenCV Interface graphique avec Kivy. ⚠️Kivy est compatible avec Python 3.7 maximum (ils n&amp;rsquo;ont pas encore migré) ​  Kivy peut être mis de côté dans un 1er temps, il est utile qu&amp;rsquo;après avoir implémenté et fiabilisé l&amp;rsquo;algorithme de recherche.</description>
+Stack technique  Imagerie avec OpenCV Interface graphique avec Kivy. :warning:Kivy est compatible avec Python 3.7 maximum (ils n&amp;rsquo;ont pas encore migré) ​  Kivy peut être mis de côté dans un 1er temps, il est utile qu&amp;rsquo;après avoir implémenté et fiabilisé l&amp;rsquo;algorithme de recherche.</description>
     </item>
     
     <item>
