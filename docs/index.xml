@@ -14,7 +14,7 @@
       
       <guid>https://synapticvoid.github.io/codingtips/pages/python-js-blockchain-kraken/</guid>
       <description>BlockStock Objectif Créer un site miroir de Kraken afin de gérer sa cryptomonnaie :
- Voir le cours de la monnaie sur une durée Acheter / Vendre Programmer des alertes (ex : monnaie &amp;lt; seuil)  Stack Technique Backend  Langage Python Framework Django BDD MySQL  Frontend  VueJS  Progression 1. Récupérer les données de Kraken Créer une route Django permettant d&amp;rsquo;afficher quelques données obtenue depuis l&amp;rsquo;API de Kraken.</description>
+ Voir le cours de la monnaie sur une durée Acheter / Vendre Programmer des alertes (ex : monnaie &amp;lt; seuil)  Stack Technique Backend  Langage Python Framework Django BDD MySQL  Frontend  VueJS  Progression 1. Récupérer les données de Kraken Créer une route Django permettant d&amp;rsquo;afficher quelques données obtenues depuis l&amp;rsquo;API de Kraken.</description>
     </item>
     
     <item>

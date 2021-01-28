@@ -8,7 +8,7 @@
 </title>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<meta name="revised" content="2021-01-28T14:34:06 CET">
+<meta name="revised" content="2021-01-28T15:21:52 CET">
 <meta name="description" content="">
 
 
@@ -308,24 +308,24 @@
 </ul>
 <h2 ref="progression" >Progression</h2><a class="anchor" id="progression"></a>
 <h3 ref="1-récupérer-les-données-de-kraken" >1. Récupérer les données de Kraken</h3><a class="anchor" id="1-récupérer-les-données-de-kraken"></a>
-<p>Créer une route Django permettant d&rsquo;afficher quelques données obtenue depuis l&rsquo;API de Kraken. Aucun formatage visuel attendu (pas de template). Les informations a afficher :</p>
+<p>Créer une route Django permettant d&rsquo;afficher quelques données obtenues depuis l&rsquo;API de Kraken. Aucun formatage visuel attendu (pas de template). Les informations a afficher :</p>
 <ul>
 <li>La liste des monnaies</li>
 <li>Le cours actuel de chaque monnaie</li>
 </ul>
-<p>Points notables :</p>
+<h4 ref="-points-notables" >🧭 Points notables</h4><a class="anchor" id="-points-notables"></a>
 <ul>
 <li>La clé d&rsquo;API Kraken peut être saisie en dur dans le code</li>
 <li>Dans la vue Django, il faudra faire une requête HTTP vers l&rsquo;API Kraken pour récupérer les données. Le package <a href="https://requests.readthedocs.io/en/master/">requests</a> est recommandé.</li>
 </ul>
 <h4 ref="-dod-" >🐣 DoD 🐣</h4><a class="anchor" id="-dod-"></a>
-<p>En se connectant sur une route <code>/dashboard</code>, on voit les taux de chaque monnaie</p>
+<p>En se connectant sur une route <code>/dashboard</code>, on voit les taux de chaque monnaie.</p>
 <h3 ref="2-saisir-le-token-api-de-kraken" >2. Saisir le token API de Kraken</h3><a class="anchor" id="2-saisir-le-token-api-de-kraken"></a>
 <p>Créer un formulaire où l&rsquo;utilisateur peut saisir sa clé d&rsquo;API Kraken pour ensuite accéder à ses informations de cryptomonnaie.</p>
-<p>Points notables :</p>
+<h4 ref="-points-notables-1" >🧭 Points notables</h4><a class="anchor" id="-points-notables-1"></a>
 <ul>
-<li>Ce formulaire doit rediriger l&rsquo;utilisateur vers <code>/dashboard</code> age en incluant l&rsquo;argument de la clé d&rsquo;API</li>
-<li><code>/dashboard</code> ne doit plus contenir de clé d&rsquo;API en dur et doit gérer les cas d&rsquo;erreur suivants
+<li>Ce formulaire doit rediriger l&rsquo;utilisateur vers <code>/dashboard</code> en incluant l&rsquo;argument de la clé d&rsquo;API</li>
+<li><code>/dashboard</code> ne doit plus contenir de clé d&rsquo;API en dur et doit gérer les cas d&rsquo;erreur suivants :
 <ul>
 <li>Clé non valide</li>
 <li>Impossible de se connecter à Kraken</li>
@@ -345,7 +345,7 @@ Le bouton d&rsquo;envoi du formulaire n&rsquo;est activé que si l&rsquo;utilisa
 <li>Pour chaque monnaie, afficher un graphique avec un historique de la monnaie sur une durée arbitraire (24h / 1 semaine / 1 mois)</li>
 <li>Pour chaque monnaie, afficher le taux min et max</li>
 </ul>
-<p>Points notables :</p>
+<h4 ref="-points-notables-2" >🧭 Points notables</h4><a class="anchor" id="-points-notables-2"></a>
 <ul>
 <li>La vue <code>/dashboard</code> utilise maintenant les templates Django</li>
 <li>Une bibliothèque JS pour le formatage de l&rsquo;historique doit être utilisé pour simplifier le travail</li>
@@ -355,7 +355,7 @@ Le bouton d&rsquo;envoi du formulaire n&rsquo;est activé que si l&rsquo;utilisa
 <p>La page <code>dashboard</code> affiche les infos pertinentes de toutes les monnaies du compte utilisateur.</p>
 <h3 ref="4-sauvegarder-les-données-en-bdd" >4. Sauvegarder les données en BDD</h3><a class="anchor" id="4-sauvegarder-les-données-en-bdd"></a>
 <p>Les données ne doivent plus être affichée depuis Kraken, mais depuis une BDD. Il faut doit créer un ensemble de tables correspondant à ce qui est reçu depuis Kraken. Les données sont toujours en provenance de Kraken. Il faut donc prévoir un mécanisme de synchronisation.</p>
-<p>Points notables :</p>
+<h4 ref="-points-notables-3" >🧭 Points notables</h4><a class="anchor" id="-points-notables-3"></a>
 <ul>
 <li>Un bouton dans le <code>/dashboard</code> permet de déclencher une synchronisation</li>
 <li><a href="https://docs.djangoproject.com/en/3.1/howto/custom-management-commands/">Une commande CLI Django</a> permet de déclencher la synchronisation directement en ligne de commande</li>
