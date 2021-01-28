@@ -22,24 +22,24 @@ Créer un site miroir de [Kraken](https://www.kraken.com/) afin de gérer sa cry
 
 ## Progression
 ### 1. Récupérer les données de Kraken
-Créer une route Django permettant d'afficher quelques données obtenue depuis l'API de Kraken. Aucun formatage visuel attendu (pas de template). Les informations a afficher :
+Créer une route Django permettant d'afficher quelques données obtenues depuis l'API de Kraken. Aucun formatage visuel attendu (pas de template). Les informations a afficher :
 * La liste des monnaies
 * Le cours actuel de chaque monnaie
 
-Points notables :
+#### :compass: Points notables
 * La clé d'API Kraken peut être saisie en dur dans le code
 * Dans la vue Django, il faudra faire une requête HTTP vers l'API Kraken pour récupérer les données. Le package [requests](https://requests.readthedocs.io/en/master/) est recommandé.
 
 
 #### :hatching_chick: DoD :hatching_chick: 
-En se connectant sur une route `/dashboard`, on voit les taux de chaque monnaie
+En se connectant sur une route `/dashboard`, on voit les taux de chaque monnaie.
 
 ### 2. Saisir le token API de Kraken
 Créer un formulaire où l'utilisateur peut saisir sa clé d'API Kraken pour ensuite accéder à ses informations de cryptomonnaie.
 
-Points notables :
-* Ce formulaire doit rediriger l'utilisateur vers `/dashboard` age en incluant l'argument de la clé d'API
-* `/dashboard` ne doit plus contenir de clé d'API en dur et doit gérer les cas d'erreur suivants
+#### :compass: Points notables
+* Ce formulaire doit rediriger l'utilisateur vers `/dashboard` en incluant l'argument de la clé d'API
+* `/dashboard` ne doit plus contenir de clé d'API en dur et doit gérer les cas d'erreur suivants :
     * Clé non valide
     * Impossible de se connecter à Kraken
     * Les données récupérées ne sont pas lisibles (problème de parsing)
@@ -56,7 +56,7 @@ Afficher des informations plus détaillées par monnaie dans `/dashboard`. Plusi
 * Pour chaque monnaie, afficher un graphique avec un historique de la monnaie sur une durée arbitraire (24h / 1 semaine / 1 mois)
 * Pour chaque monnaie, afficher le taux min et max
 
-Points notables :
+#### :compass: Points notables
 * La vue `/dashboard` utilise maintenant les templates Django
 * Une bibliothèque JS pour le formatage de l'historique doit être utilisé pour simplifier le travail
 * Le composant affichage de l'historique doit être réutilisable (on pourrait en afficher autant que l'on veut)
@@ -67,7 +67,7 @@ La page `dashboard` affiche les infos pertinentes de toutes les monnaies du comp
 ### 4. Sauvegarder les données en BDD
 Les données ne doivent plus être affichée depuis Kraken, mais depuis une BDD. Il faut doit créer un ensemble de tables correspondant à ce qui est reçu depuis Kraken. Les données sont toujours en provenance de Kraken. Il faut donc prévoir un mécanisme de synchronisation.
 
-Points notables :
+#### :compass: Points notables
 * Un bouton dans le `/dashboard` permet de déclencher une synchronisation
 * [Une commande CLI Django](https://docs.djangoproject.com/en/3.1/howto/custom-management-commands/) permet de déclencher la synchronisation directement en ligne de commande
 * Lors du 1er affichage du dashboard, si les tables sont vide, la synchronisation doit être faites automatiquement
