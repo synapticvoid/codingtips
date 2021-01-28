@@ -8,7 +8,7 @@
 </title>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<meta name="revised" content="2021-01-27T19:43:00 CET">
+<meta name="revised" content="2021-01-28T14:34:06 CET">
 <meta name="description" content="">
 
 
@@ -257,7 +257,30 @@
   			Jump to Section
   			<i style=";" class="fas fa-chevron-right"></i>
 		</span>
-		<nav id="TableOfContents"></nav>
+		<nav id="TableOfContents">
+  <ul>
+    <li><a href="#objectif">Objectif</a></li>
+    <li><a href="#stack-technique">Stack Technique</a>
+      <ul>
+        <li><a href="#backend">Backend</a></li>
+        <li><a href="#frontend">Frontend</a></li>
+      </ul>
+    </li>
+    <li><a href="#progression">Progression</a>
+      <ul>
+        <li><a href="#1-récupérer-les-données-de-kraken">1. Récupérer les données de Kraken</a></li>
+        <li><a href="#2-saisir-le-token-api-de-kraken">2. Saisir le token API de Kraken</a></li>
+        <li><a href="#3-formater-les-données-en-présentation">3. Formater les données en présentation</a></li>
+        <li><a href="#4-sauvegarder-les-données-en-bdd">4. Sauvegarder les données en BDD</a></li>
+        <li><a href="#5-acheter--vendre-des-actions">5. Acheter / vendre des actions</a></li>
+        <li><a href="#6-login-utilisateur-et-token-kraken">6. Login utilisateur et token Kraken</a></li>
+        <li><a href="#7-programmer-des-alertes">7. Programmer des alertes</a></li>
+        <li><a href="#8-créer-une-api-rest">8. Créer une API REST</a></li>
+        <li><a href="#9-séparer-la-webapp-vuejs">9. Séparer la webapp VueJS</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
 	</div>
 	
 	
@@ -267,7 +290,96 @@
 
 
 
-	<div class="content">No content</div>
+	<div class="content">
+	    <h1 ref="blockstock" >BlockStock</h1><a class="anchor" id="blockstock"></a>
+<h2 ref="objectif" >Objectif</h2><a class="anchor" id="objectif"></a>
+<p>Créer un site miroir de <a href="https://www.kraken.com/">Kraken</a> afin de gérer sa cryptomonnaie :</p>
+<ul>
+<li>Voir le cours de la monnaie sur une durée</li>
+<li>Acheter / Vendre</li>
+<li>Programmer des alertes (ex : monnaie &lt; seuil)</li>
+</ul>
+<h2 ref="stack-technique" >Stack Technique</h2><a class="anchor" id="stack-technique"></a>
+<h3 ref="backend" >Backend</h3><a class="anchor" id="backend"></a>
+<ul>
+<li>Langage Python</li>
+<li>Framework <a href="https://www.djangoproject.com/">Django</a></li>
+<li>BDD MySQL</li>
+</ul>
+<h3 ref="frontend" >Frontend</h3><a class="anchor" id="frontend"></a>
+<ul>
+<li><a href="https://vuejs.org/">VueJS</a></li>
+</ul>
+<h2 ref="progression" >Progression</h2><a class="anchor" id="progression"></a>
+<h3 ref="1-récupérer-les-données-de-kraken" >1. Récupérer les données de Kraken</h3><a class="anchor" id="1-récupérer-les-données-de-kraken"></a>
+<p>Créer une route Django permettant d&rsquo;afficher quelques données obtenue depuis l&rsquo;API de Kraken. Aucun formatage visuel attendu (pas de template). Les informations a afficher :</p>
+<ul>
+<li>La liste des monnaies</li>
+<li>Le cours actuel de chaque monnaie</li>
+</ul>
+<p>Points notables :</p>
+<ul>
+<li>La clé d&rsquo;API Kraken peut être saisie en dur dans le code</li>
+<li>Dans la vue Django, il faudra faire une requête HTTP vers l&rsquo;API Kraken pour récupérer les données. Le package <a href="https://requests.readthedocs.io/en/master/">requests</a> est recommandé.</li>
+</ul>
+<h4 ref="-dod-" >🐣 DoD 🐣</h4><a class="anchor" id="-dod-"></a>
+<p>En se connectant sur une route <code>/dashboard</code>, on voit les taux de chaque monnaie</p>
+<h3 ref="2-saisir-le-token-api-de-kraken" >2. Saisir le token API de Kraken</h3><a class="anchor" id="2-saisir-le-token-api-de-kraken"></a>
+<p>Créer un formulaire où l&rsquo;utilisateur peut saisir sa clé d&rsquo;API Kraken pour ensuite accéder à ses informations de cryptomonnaie.</p>
+<p>Points notables :</p>
+<ul>
+<li>Ce formulaire doit rediriger l&rsquo;utilisateur vers <code>/dashboard</code> age en incluant l&rsquo;argument de la clé d&rsquo;API</li>
+<li><code>/dashboard</code> ne doit plus contenir de clé d&rsquo;API en dur et doit gérer les cas d&rsquo;erreur suivants
+<ul>
+<li>Clé non valide</li>
+<li>Impossible de se connecter à Kraken</li>
+<li>Les données récupérées ne sont pas lisibles (problème de parsing)</li>
+</ul>
+</li>
+<li>Les templates Django doivent être utilisés</li>
+<li>VueJS doit être utilisé pour l&rsquo;affichage du formulaire</li>
+</ul>
+<h4 ref="-dod--1" >🐣 DoD 🐣</h4><a class="anchor" id="-dod--1"></a>
+<p>Créer une page <code>/api-token</code> où l&rsquo;utilisateur saisi son Token d&rsquo;API, valide le formulaire et est redirigé vers <code>/dashboard</code>.
+Le bouton d&rsquo;envoi du formulaire n&rsquo;est activé que si l&rsquo;utilisateur a saisi au moins 3 caractères (validation à faire en JS).</p>
+<h3 ref="3-formater-les-données-en-présentation" >3. Formater les données en présentation</h3><a class="anchor" id="3-formater-les-données-en-présentation"></a>
+<p>Afficher des informations plus détaillées par monnaie dans <code>/dashboard</code>. Plusieurs blocs :</p>
+<ul>
+<li>Un bloc de résumé de toutes les monnaies, avec le cours actuel</li>
+<li>Pour chaque monnaie, afficher un graphique avec un historique de la monnaie sur une durée arbitraire (24h / 1 semaine / 1 mois)</li>
+<li>Pour chaque monnaie, afficher le taux min et max</li>
+</ul>
+<p>Points notables :</p>
+<ul>
+<li>La vue <code>/dashboard</code> utilise maintenant les templates Django</li>
+<li>Une bibliothèque JS pour le formatage de l&rsquo;historique doit être utilisé pour simplifier le travail</li>
+<li>Le composant affichage de l&rsquo;historique doit être réutilisable (on pourrait en afficher autant que l&rsquo;on veut)</li>
+</ul>
+<h4 ref="-dod--2" >🐣 DoD 🐣</h4><a class="anchor" id="-dod--2"></a>
+<p>La page <code>dashboard</code> affiche les infos pertinentes de toutes les monnaies du compte utilisateur.</p>
+<h3 ref="4-sauvegarder-les-données-en-bdd" >4. Sauvegarder les données en BDD</h3><a class="anchor" id="4-sauvegarder-les-données-en-bdd"></a>
+<p>Les données ne doivent plus être affichée depuis Kraken, mais depuis une BDD. Il faut doit créer un ensemble de tables correspondant à ce qui est reçu depuis Kraken. Les données sont toujours en provenance de Kraken. Il faut donc prévoir un mécanisme de synchronisation.</p>
+<p>Points notables :</p>
+<ul>
+<li>Un bouton dans le <code>/dashboard</code> permet de déclencher une synchronisation</li>
+<li><a href="https://docs.djangoproject.com/en/3.1/howto/custom-management-commands/">Une commande CLI Django</a> permet de déclencher la synchronisation directement en ligne de commande</li>
+<li>Lors du 1er affichage du dashboard, si les tables sont vide, la synchronisation doit être faites automatiquement</li>
+<li>Afficher la date de la dernière synchro dans le dashboard (il faut donc stocker cette information en BDD)</li>
+</ul>
+<h4 ref="-dod--3" >🐣 DoD 🐣</h4><a class="anchor" id="-dod--3"></a>
+<p>La requête HTTP pour récupérer les infos de Kraken est utilisé uniquement dans le cadre d&rsquo;une synchro. Toutes les informations affichées sur le site proviennent de la BDD.</p>
+<h3 ref="5-acheter--vendre-des-actions" >5. Acheter / vendre des actions</h3><a class="anchor" id="5-acheter--vendre-des-actions"></a>
+<h4 ref="-todo-" >🧰 TODO 🔧</h4><a class="anchor" id="-todo-"></a>
+<h3 ref="6-login-utilisateur-et-token-kraken" >6. Login utilisateur et token Kraken</h3><a class="anchor" id="6-login-utilisateur-et-token-kraken"></a>
+<h4 ref="-todo--1" >🧰 TODO 🔧</h4><a class="anchor" id="-todo--1"></a>
+<h3 ref="7-programmer-des-alertes" >7. Programmer des alertes</h3><a class="anchor" id="7-programmer-des-alertes"></a>
+<h4 ref="-todo--2" >🧰 TODO 🔧</h4><a class="anchor" id="-todo--2"></a>
+<h3 ref="8-créer-une-api-rest" >8. Créer une API REST</h3><a class="anchor" id="8-créer-une-api-rest"></a>
+<h4 ref="-todo--3" >🧰 TODO 🔧</h4><a class="anchor" id="-todo--3"></a>
+<h3 ref="9-séparer-la-webapp-vuejs" >9. Séparer la webapp VueJS</h3><a class="anchor" id="9-séparer-la-webapp-vuejs"></a>
+<h4 ref="-todo--4" >🧰 TODO 🔧</h4><a class="anchor" id="-todo--4"></a>
+
+		</div>
 
 
 
@@ -301,7 +413,30 @@
             <li><a href="/codingtips/pages/python-js-blockchain-kraken/">Python Js Blockchain Kraken</a></li>
         </ul>
     </nav>
-    <nav id="TableOfContents"></nav>
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#objectif">Objectif</a></li>
+    <li><a href="#stack-technique">Stack Technique</a>
+      <ul>
+        <li><a href="#backend">Backend</a></li>
+        <li><a href="#frontend">Frontend</a></li>
+      </ul>
+    </li>
+    <li><a href="#progression">Progression</a>
+      <ul>
+        <li><a href="#1-récupérer-les-données-de-kraken">1. Récupérer les données de Kraken</a></li>
+        <li><a href="#2-saisir-le-token-api-de-kraken">2. Saisir le token API de Kraken</a></li>
+        <li><a href="#3-formater-les-données-en-présentation">3. Formater les données en présentation</a></li>
+        <li><a href="#4-sauvegarder-les-données-en-bdd">4. Sauvegarder les données en BDD</a></li>
+        <li><a href="#5-acheter--vendre-des-actions">5. Acheter / vendre des actions</a></li>
+        <li><a href="#6-login-utilisateur-et-token-kraken">6. Login utilisateur et token Kraken</a></li>
+        <li><a href="#7-programmer-des-alertes">7. Programmer des alertes</a></li>
+        <li><a href="#8-créer-une-api-rest">8. Créer une API REST</a></li>
+        <li><a href="#9-séparer-la-webapp-vuejs">9. Séparer la webapp VueJS</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
 </div>
 
 		
