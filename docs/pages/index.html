@@ -8,7 +8,7 @@
 </title>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<meta name="revised" content="2021-01-28T15:21:52 CET">
+<meta name="revised" content="2021-03-27T16:23:51 CET">
 <meta name="description" content="">
 
 
@@ -191,7 +191,7 @@
   
     <li class="active">
       
-        Python Js Blockchain Kraken
+        Android Kotlin Pomodoro
       
     </li>
 
@@ -212,7 +212,7 @@
 		
 
 		
-			<h1>Pages<span>Python Js Blockchain Kraken</span></h1>
+			<h1>Pages<span>Android Kotlin Pomodoro</span></h1>
         
 
 			
@@ -224,6 +224,11 @@
 	            		
 	        			
 	            	<li class="active">
+	            		<a title="$pagetitle" href="/codingtips/pages/android-kotlin-pomodoro/">Android Kotlin Pomodoro</a>
+	            	</li>
+	            		
+	        			
+	            	<li >
 	            		<a title="$pagetitle" href="/codingtips/pages/python-js-blockchain-kraken/">Python Js Blockchain Kraken</a>
 	            	</li>
 	            		
@@ -256,23 +261,13 @@
 		<nav id="TableOfContents">
   <ul>
     <li><a href="#objectif">Objectif</a></li>
-    <li><a href="#stack-technique">Stack Technique</a>
+    <li><a href="#stack-technique">Stack technique</a></li>
+    <li><a href="#backlog">Backlog</a>
       <ul>
-        <li><a href="#backend">Backend</a></li>
-        <li><a href="#frontend">Frontend</a></li>
-      </ul>
-    </li>
-    <li><a href="#progression">Progression</a>
-      <ul>
-        <li><a href="#1-récupérer-les-données-de-kraken">1. Récupérer les données de Kraken</a></li>
-        <li><a href="#2-saisir-le-token-api-de-kraken">2. Saisir le token API de Kraken</a></li>
-        <li><a href="#3-formater-les-données-en-présentation">3. Formater les données en présentation</a></li>
-        <li><a href="#4-sauvegarder-les-données-en-bdd">4. Sauvegarder les données en BDD</a></li>
-        <li><a href="#5-acheter--vendre-des-actions">5. Acheter / vendre des actions</a></li>
-        <li><a href="#6-login-utilisateur-et-token-kraken">6. Login utilisateur et token Kraken</a></li>
-        <li><a href="#7-programmer-des-alertes">7. Programmer des alertes</a></li>
-        <li><a href="#8-créer-une-api-rest">8. Créer une API REST</a></li>
-        <li><a href="#9-séparer-la-webapp-vuejs">9. Séparer la webapp VueJS</a></li>
+        <li><a href="#1-pomodoro">1. Pomodoro</a></li>
+        <li><a href="#2-enregistrement-pomodoro-en-bdd">2. Enregistrement Pomodoro en BDD</a></li>
+        <li><a href="#3-requête-http-des-organismes">3. Requête HTTP des organismes</a></li>
+        <li><a href="#4-dashboard-des-organisme">4. Dashboard des organisme</a></li>
       </ul>
     </li>
   </ul>
@@ -287,93 +282,86 @@
 
 
 	<div class="content">
-	    <h1 ref="blockstock" >BlockStock</h1><a class="anchor" id="blockstock"></a>
+	    <h1 ref="android-pomodoro" >Android Pomodoro</h1><a class="anchor" id="android-pomodoro"></a>
 <h2 ref="objectif" >Objectif</h2><a class="anchor" id="objectif"></a>
-<p>Créer un site miroir de <a href="https://www.kraken.com/">Kraken</a> afin de gérer sa cryptomonnaie :</p>
+<p>Créer une application de <a href="https://fr.wikipedia.org/wiki/Technique_Pomodoro">Pomodoro</a> afin d&rsquo;organiser son temps de travail :</p>
 <ul>
-<li>Voir le cours de la monnaie sur une durée</li>
-<li>Acheter / Vendre</li>
-<li>Programmer des alertes (ex : monnaie &lt; seuil)</li>
+<li>Démarrer un timer d&rsquo;une durée par défaut de 25 mins</li>
+<li>Voir un historiques des pomodoros effectués</li>
 </ul>
-<h2 ref="stack-technique" >Stack Technique</h2><a class="anchor" id="stack-technique"></a>
-<h3 ref="backend" >Backend</h3><a class="anchor" id="backend"></a>
+<p>Pour rendre l&rsquo;application ludique, chaque pomodoro sera symbolisé par un organisme qui doit grandir (arbre, plante, animal / autre) :</p>
 <ul>
-<li>Langage Python</li>
-<li>Framework <a href="https://www.djangoproject.com/">Django</a></li>
-<li>BDD MySQL</li>
+<li>Si le pomodoro est interrompu, l&rsquo;organisme meurt</li>
+<li>Si le pomodoro est terminé, l&rsquo;organisme survi et est ajouté dans un jardin / parc</li>
 </ul>
-<h3 ref="frontend" >Frontend</h3><a class="anchor" id="frontend"></a>
+<p>Pendant le pomodoro, l&rsquo;organisme grandit. L&rsquo;inspiration directe est l&rsquo;application Android <a href="https://play.google.com/store/apps/details?id=cc.forestapp">Forest</a>.</p>
+<h2 ref="stack-technique" >Stack technique</h2><a class="anchor" id="stack-technique"></a>
 <ul>
-<li><a href="https://vuejs.org/">VueJS</a></li>
+<li>Langage Kotlin</li>
+<li>Android</li>
+<li>Utilisation du MVVM</li>
+<li>BDD locale avec Room</li>
+<li>Requêtes HTTP avec Retrofit / Moshi</li>
 </ul>
-<h2 ref="progression" >Progression</h2><a class="anchor" id="progression"></a>
-<h3 ref="1-récupérer-les-données-de-kraken" >1. Récupérer les données de Kraken</h3><a class="anchor" id="1-récupérer-les-données-de-kraken"></a>
-<p>Créer une route Django permettant d&rsquo;afficher quelques données obtenues depuis l&rsquo;API de Kraken. Aucun formatage visuel attendu (pas de template). Les informations a afficher :</p>
+<h2 ref="backlog" >Backlog</h2><a class="anchor" id="backlog"></a>
+<h3 ref="1-pomodoro" >1. Pomodoro</h3><a class="anchor" id="1-pomodoro"></a>
+<p>Implémenter un écran permettant à l&rsquo;utilisateur d&rsquo;interagir avec un pomodoro :</p>
 <ul>
-<li>La liste des monnaies</li>
-<li>Le cours actuel de chaque monnaie</li>
+<li>Démarrer</li>
+<li>Arrêter</li>
+<li>Mettre en pause</li>
 </ul>
+<p>Un compte-à-rebours (ex: 25:00 pour 25 minutes et 00 secondes) s&rsquo;affiche et est mis à jour à chaque seconde. Par défaut la durée est de 25 minutes, mais l&rsquo;utilisateur peut régler la durée.</p>
 <h4 ref="-points-notables" >🧭 Points notables</h4><a class="anchor" id="-points-notables"></a>
 <ul>
-<li>La clé d&rsquo;API Kraken peut être saisie en dur dans le code</li>
-<li>Dans la vue Django, il faudra faire une requête HTTP vers l&rsquo;API Kraken pour récupérer les données. Le package <a href="https://requests.readthedocs.io/en/master/">requests</a> est recommandé.</li>
+<li>Un ViewModel est requis pour cet écran</li>
+<li>L&rsquo;Activity s&rsquo;occupe de l&rsquo;affichage du compte-à-rebours (c&rsquo;est elle qui maintient le compte-à-rebours). Le ViewModel ne fait que recevoir les évènement de start / stop / pause pour renvoyer le bon état d&rsquo;écran</li>
 </ul>
-<h4 ref="-dod-" >🐣 DoD 🐣</h4><a class="anchor" id="-dod-"></a>
-<p>En se connectant sur une route <code>/dashboard</code>, on voit les taux de chaque monnaie.</p>
-<h3 ref="2-saisir-le-token-api-de-kraken" >2. Saisir le token API de Kraken</h3><a class="anchor" id="2-saisir-le-token-api-de-kraken"></a>
-<p>Créer un formulaire où l&rsquo;utilisateur peut saisir sa clé d&rsquo;API Kraken pour ensuite accéder à ses informations de cryptomonnaie.</p>
+<h3 ref="2-enregistrement-pomodoro-en-bdd" >2. Enregistrement Pomodoro en BDD</h3><a class="anchor" id="2-enregistrement-pomodoro-en-bdd"></a>
+<p>Chaque Pomodoro est enregistré dans une BDD locale. Un nouvel écran permet d&rsquo;afficher l&rsquo;historique de tous les pomodoros. Les informations à stocker sont :</p>
+<ul>
+<li>Date du pomodoro</li>
+<li>Heure de début / fin</li>
+<li>Statut final (terminé / interrompu)</li>
+<li>Nom de l&rsquo;organisme</li>
+<li>Catégorie de l&rsquo;organisme</li>
+<li>Image de l&rsquo;organisme résultant du pomodoro</li>
+</ul>
 <h4 ref="-points-notables-1" >🧭 Points notables</h4><a class="anchor" id="-points-notables-1"></a>
 <ul>
-<li>Ce formulaire doit rediriger l&rsquo;utilisateur vers <code>/dashboard</code> en incluant l&rsquo;argument de la clé d&rsquo;API</li>
-<li><code>/dashboard</code> ne doit plus contenir de clé d&rsquo;API en dur et doit gérer les cas d&rsquo;erreur suivants :
-<ul>
-<li>Clé non valide</li>
-<li>Impossible de se connecter à Kraken</li>
-<li>Les données récupérées ne sont pas lisibles (problème de parsing)</li>
+<li>Lorsqu&rsquo;un pomodoro est interrompu / se termine, les information sont enregistrées dans la BDD (depuis l&rsquo;écran principal)</li>
+<li>Un ViewModel + RecyclerView doivent être utilisés dans le nouvel écran</li>
+<li>Pour un affichage plus agréable, il est recommandé d&rsquo;utiliser une <a href="https://material.io/components/cards/android">Card</a></li>
+<li>Quand on clique sur une carte une page affiche le détail</li>
+<li>Dans la vue de détail, il est possible de supprimer la carte</li>
 </ul>
-</li>
-<li>Les templates Django doivent être utilisés</li>
-<li>VueJS doit être utilisé pour l&rsquo;affichage du formulaire</li>
-</ul>
-<h4 ref="-dod--1" >🐣 DoD 🐣</h4><a class="anchor" id="-dod--1"></a>
-<p>Créer une page <code>/api-token</code> où l&rsquo;utilisateur saisi son Token d&rsquo;API, valide le formulaire et est redirigé vers <code>/dashboard</code>.
-Le bouton d&rsquo;envoi du formulaire n&rsquo;est activé que si l&rsquo;utilisateur a saisi au moins 3 caractères (validation à faire en JS).</p>
-<h3 ref="3-formater-les-données-en-présentation" >3. Formater les données en présentation</h3><a class="anchor" id="3-formater-les-données-en-présentation"></a>
-<p>Afficher des informations plus détaillées par monnaie dans <code>/dashboard</code>. Plusieurs blocs :</p>
-<ul>
-<li>Un bloc de résumé de toutes les monnaies, avec le cours actuel</li>
-<li>Pour chaque monnaie, afficher un graphique avec un historique de la monnaie sur une durée arbitraire (24h / 1 semaine / 1 mois)</li>
-<li>Pour chaque monnaie, afficher le taux min et max</li>
-</ul>
+<h3 ref="3-requête-http-des-organismes" >3. Requête HTTP des organismes</h3><a class="anchor" id="3-requête-http-des-organismes"></a>
+<p>Le pomodoro affiche l&rsquo;organisme qui va grandir avec le compte-à-rebours. Lorsque l&rsquo;utilisateur clique sur cette image, il peut choisir un autre organisme dans une liste. La sélection met à jour l&rsquo;organisme qui sera ensuite enregistré en BDD.</p>
+<p>Chaque organisme a quelques images intermédiaires de &ldquo;croissance&rdquo; ainsi qu&rsquo;une image de mort.</p>
 <h4 ref="-points-notables-2" >🧭 Points notables</h4><a class="anchor" id="-points-notables-2"></a>
 <ul>
-<li>La vue <code>/dashboard</code> utilise maintenant les templates Django</li>
-<li>Une bibliothèque JS pour le formatage de l&rsquo;historique doit être utilisé pour simplifier le travail</li>
-<li>Le composant affichage de l&rsquo;historique doit être réutilisable (on pourrait en afficher autant que l&rsquo;on veut)</li>
+<li>La liste des organismes disponibles est récupérée grâce à une requête HTTP vers un backend. Un JSON est renvoyé avec tous les organismes disponibles. Chaque organisme a :
+<ul>
+<li>Une image par défaut</li>
+<li>Un nom</li>
+<li>Une catégorie (fleur / arbuste / poisson / autre)</li>
 </ul>
-<h4 ref="-dod--2" >🐣 DoD 🐣</h4><a class="anchor" id="-dod--2"></a>
-<p>La page <code>dashboard</code> affiche les infos pertinentes de toutes les monnaies du compte utilisateur.</p>
-<h3 ref="4-sauvegarder-les-données-en-bdd" >4. Sauvegarder les données en BDD</h3><a class="anchor" id="4-sauvegarder-les-données-en-bdd"></a>
-<p>Les données ne doivent plus être affichée depuis Kraken, mais depuis une BDD. Il faut doit créer un ensemble de tables correspondant à ce qui est reçu depuis Kraken. Les données sont toujours en provenance de Kraken. Il faut donc prévoir un mécanisme de synchronisation.</p>
+</li>
+<li>Le ViewModel n&rsquo;est pas obligatoire ici</li>
+<li>Pour simplifier le développement, les images seront stockées en dur dans l&rsquo;application</li>
+</ul>
+<h3 ref="4-dashboard-des-organisme" >4. Dashboard des organisme</h3><a class="anchor" id="4-dashboard-des-organisme"></a>
+<p>Un écran affiche tous les organismes qui ont survécus. Chaque organisme représentant une pomodoro réussi, l&rsquo;objectif pour l&rsquo;utilisateur est d&rsquo;avoir cet écran le plus rempli.</p>
+<p>Afficher quelques statistiques :</p>
+<ul>
+<li>Durée totale réalisée</li>
+<li>Nombre d&rsquo;organismes vivants. Afficher par exemple : sapins x 2, chênes x 3, etc</li>
+</ul>
 <h4 ref="-points-notables-3" >🧭 Points notables</h4><a class="anchor" id="-points-notables-3"></a>
 <ul>
-<li>Un bouton dans le <code>/dashboard</code> permet de déclencher une synchronisation</li>
-<li><a href="https://docs.djangoproject.com/en/3.1/howto/custom-management-commands/">Une commande CLI Django</a> permet de déclencher la synchronisation directement en ligne de commande</li>
-<li>Lors du 1er affichage du dashboard, si les tables sont vide, la synchronisation doit être faites automatiquement</li>
-<li>Afficher la date de la dernière synchro dans le dashboard (il faut donc stocker cette information en BDD)</li>
+<li>En plus de ces informations, il serait top pour l&rsquo;utilisateur d&rsquo;avoir une image dynamiquement généré qui regroupe tous les organisme. L&rsquo;utilisateur pourrait enregistrer / partager cette image de réussite.</li>
+<li>Le point précédent est en bonus</li>
 </ul>
-<h4 ref="-dod--3" >🐣 DoD 🐣</h4><a class="anchor" id="-dod--3"></a>
-<p>La requête HTTP pour récupérer les infos de Kraken est utilisé uniquement dans le cadre d&rsquo;une synchro. Toutes les informations affichées sur le site proviennent de la BDD.</p>
-<h3 ref="5-acheter--vendre-des-actions" >5. Acheter / vendre des actions</h3><a class="anchor" id="5-acheter--vendre-des-actions"></a>
-<h4 ref="-todo-" >🧰 TODO 🔧</h4><a class="anchor" id="-todo-"></a>
-<h3 ref="6-login-utilisateur-et-token-kraken" >6. Login utilisateur et token Kraken</h3><a class="anchor" id="6-login-utilisateur-et-token-kraken"></a>
-<h4 ref="-todo--1" >🧰 TODO 🔧</h4><a class="anchor" id="-todo--1"></a>
-<h3 ref="7-programmer-des-alertes" >7. Programmer des alertes</h3><a class="anchor" id="7-programmer-des-alertes"></a>
-<h4 ref="-todo--2" >🧰 TODO 🔧</h4><a class="anchor" id="-todo--2"></a>
-<h3 ref="8-créer-une-api-rest" >8. Créer une API REST</h3><a class="anchor" id="8-créer-une-api-rest"></a>
-<h4 ref="-todo--3" >🧰 TODO 🔧</h4><a class="anchor" id="-todo--3"></a>
-<h3 ref="9-séparer-la-webapp-vuejs" >9. Séparer la webapp VueJS</h3><a class="anchor" id="9-séparer-la-webapp-vuejs"></a>
-<h4 ref="-todo--4" >🧰 TODO 🔧</h4><a class="anchor" id="-todo--4"></a>
 
 		</div>
 
@@ -425,7 +413,7 @@ Le bouton d&rsquo;envoi du formulaire n&rsquo;est activé que si l&rsquo;utilisa
 			
 		      <li>
 		          <i class='fas fa-calendar'></i>
-		          Last update on 27 January 2021
+		          Last update on 27 March 2021
 		      </li>
 		    
 		    
