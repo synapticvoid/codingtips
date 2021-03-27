@@ -66,7 +66,7 @@ Chaque organisme a quelques images intermédiaires de "croissance" ainsi qu'une 
 * Le ViewModel n'est pas obligatoire ici
 * Pour simplifier le développement, les images seront stockées en dur dans l'application
 
-### 4. Dashboard des organisme
+### 4. Dashboard des organismes
 Un écran affiche tous les organismes qui ont survécus. Chaque organisme représentant une pomodoro réussi, l'objectif pour l'utilisateur est d'avoir cet écran le plus rempli.
 
 Afficher quelques statistiques :

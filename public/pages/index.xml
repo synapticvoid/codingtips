@@ -6,7 +6,28 @@
     <description>Recent content in Pages on Coding Tips</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>fr-fr</language>
-    <lastBuildDate>Fri, 18 Dec 2020 19:33:41 +0100</lastBuildDate><atom:link href="https://synapticvoid.github.io/codingtips/pages/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 27 Mar 2021 15:50:24 +0100</lastBuildDate><atom:link href="https://synapticvoid.github.io/codingtips/pages/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Android Kotlin Pomodoro</title>
+      <link>https://synapticvoid.github.io/codingtips/pages/android-kotlin-pomodoro/</link>
+      <pubDate>Sat, 27 Mar 2021 15:50:24 +0100</pubDate>
+      
+      <guid>https://synapticvoid.github.io/codingtips/pages/android-kotlin-pomodoro/</guid>
+      <description>Android Pomodoro Objectif Créer une application de Pomodoro afin d&amp;rsquo;organiser son temps de travail :
+ Démarrer un timer d&amp;rsquo;une durée par défaut de 25 mins Voir un historiques des pomodoros effectués  Pour rendre l&amp;rsquo;application ludique, chaque pomodoro sera symbolisé par un organisme qui doit grandir (arbre, plante, animal / autre) :
+ Si le pomodoro est interrompu, l&amp;rsquo;organisme meurt Si le pomodoro est terminé, l&amp;rsquo;organisme survi et est ajouté dans un jardin / parc  Pendant le pomodoro, l&amp;rsquo;organisme grandit.</description>
+    </item>
+    
+    <item>
+      <title>Python Js Blockchain Kraken</title>
+      <link>https://synapticvoid.github.io/codingtips/pages/python-js-blockchain-kraken/</link>
+      <pubDate>Wed, 27 Jan 2021 19:26:48 +0100</pubDate>
+      
+      <guid>https://synapticvoid.github.io/codingtips/pages/python-js-blockchain-kraken/</guid>
+      <description>BlockStock Objectif Créer un site miroir de Kraken afin de gérer sa cryptomonnaie :
+ Voir le cours de la monnaie sur une durée Acheter / Vendre Programmer des alertes (ex : monnaie &amp;lt; seuil)  Stack Technique Backend  Langage Python Framework Django BDD MySQL  Frontend  VueJS  Progression 1. Récupérer les données de Kraken Créer une route Django permettant d&amp;rsquo;afficher quelques données obtenues depuis l&amp;rsquo;API de Kraken.</description>
+    </item>
+    
     <item>
       <title>Python Opencv Object Tracker</title>
       <link>https://synapticvoid.github.io/codingtips/pages/python-opencv-object-tracker/</link>
@@ -14,7 +35,7 @@
       
       <guid>https://synapticvoid.github.io/codingtips/pages/python-opencv-object-tracker/</guid>
       <description>TMIYC (Track Me If You Can) Objectif Être capable de suivre un objet dans une vidéo. L&amp;rsquo;objet doit être identifié (par un rectangle) et un rectangle doit être affiché pendant la lecture de la vidéo pour indiqué que la vidéo est suivi.
-Stack technique  Imagerie avec OpenCV Interface graphique avec Kivy. :warning:Kivy est compatible avec Python 3.7 maximum (ils n&amp;rsquo;ont pas encore migré) ​  Kivy peut être mis de côté dans un 1er temps, il est utile qu&amp;rsquo;après avoir implémenté et fiabilisé l&amp;rsquo;algorithme de recherche.</description>
+Stack technique  Imagerie avec OpenCV Interface graphique avec Kivy. ⚠️Kivy est compatible avec Python 3.7 maximum (ils n&amp;rsquo;ont pas encore migré) ​  Kivy peut être mis de côté dans un 1er temps, il est utile qu&amp;rsquo;après avoir implémenté et fiabilisé l&amp;rsquo;algorithme de recherche.</description>
     </item>
     
     <item>
