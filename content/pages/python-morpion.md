@@ -37,8 +37,3 @@ Le programme doit supporter les fonctionnalités additionnelles suivantes :
   Le joueur 2 a gagné
   ```
 
-  
-
-## Rendu
-
-**Le rendu doit être fait le dimanche 06/12/2020à  23h59**. Il faudra m'envoyer le lien vers le repo GitHub (mon adresse mail : robin.penea@gmail.com). C'est la date du dernier qui commit qui compte.
