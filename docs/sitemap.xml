@@ -1,48 +1,33 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  
   <url>
     <loc>https://synapticvoid.github.io/codingtips/</loc>
-    <lastmod>2021-03-27T15:50:24+01:00</lastmod>
+    <lastmod>2021-11-02T13:50:24+01:00</lastmod>
     <priority>0</priority>
-  </url>
-  
-  <url>
+  </url><url>
+    <loc>https://synapticvoid.github.io/codingtips/pages/algorithm-intro/</loc>
+    <lastmod>2021-11-02T13:50:24+01:00</lastmod>
+  </url><url>
+    <loc>https://synapticvoid.github.io/codingtips/pages/</loc>
+    <lastmod>2021-11-02T13:50:24+01:00</lastmod>
+  </url><url>
     <loc>https://synapticvoid.github.io/codingtips/pages/android-kotlin-pomodoro/</loc>
     <lastmod>2021-03-27T15:50:24+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://synapticvoid.github.io/codingtips/pages/</loc>
-    <lastmod>2021-03-27T15:50:24+01:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://synapticvoid.github.io/codingtips/pages/python-js-blockchain-kraken/</loc>
     <lastmod>2021-01-27T19:26:48+01:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://synapticvoid.github.io/codingtips/pages/python-opencv-object-tracker/</loc>
     <lastmod>2020-12-18T19:33:41+01:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://synapticvoid.github.io/codingtips/pages/javascript/</loc>
     <lastmod>2020-11-10T16:10:38+01:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://synapticvoid.github.io/codingtips/pages/python-morpion/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://synapticvoid.github.io/codingtips/categories/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://synapticvoid.github.io/codingtips/tags/</loc>
   </url>
-  
 </urlset>

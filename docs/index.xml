@@ -6,7 +6,18 @@
     <description>Recent content on Coding Tips</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>fr-fr</language>
-    <lastBuildDate>Sat, 27 Mar 2021 15:50:24 +0100</lastBuildDate><atom:link href="https://synapticvoid.github.io/codingtips/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 02 Nov 2021 13:50:24 +0100</lastBuildDate><atom:link href="https://synapticvoid.github.io/codingtips/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Algorithmes - Intro</title>
+      <link>https://synapticvoid.github.io/codingtips/pages/algorithm-intro/</link>
+      <pubDate>Tue, 02 Nov 2021 13:50:24 +0100</pubDate>
+      
+      <guid>https://synapticvoid.github.io/codingtips/pages/algorithm-intro/</guid>
+      <description>Algorithmes - Intro 🎯 Objectif 🎯 Prendre du level sur l&amp;rsquo;algorithmie :
+ Analyser un sujet Ecrire un algorithme qui résout le problème Recommencer ! Chaque algo est une pompe mentale 😄  Quelques explications supplémentaires :
+ Vous pouvez réaliser les exercices proposés dans le langage de votre choix (Java / Python / C# / Autre). Les algos vont souvent interagir avec l&amp;rsquo;OS, évitez donc le JavaScript pour faire ces exercices Par souci de lisibilité, les exemples de code seront donnés en Python Si une bibliothèque est nécessaire pour réaliser un exercice, elle sera précisée dans la description Les exercices sont classés par difficulté croissante Utilisez git pour stocker tous les exercices dans un repo (un dossier = un exercice)  📚 Ressources 📚 Je vous recommande ce livre d&amp;rsquo;introduction à l&amp;rsquo;algorithmie Grokking Algorithms - Aditya Y Bhargava qui vous donnera tous les fondamentaux (complexité, recherches dichotomique, hashmap, etc).</description>
+    </item>
+    
     <item>
       <title>Android Kotlin Pomodoro</title>
       <link>https://synapticvoid.github.io/codingtips/pages/android-kotlin-pomodoro/</link>
